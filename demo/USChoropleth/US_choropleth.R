@@ -1,7 +1,11 @@
 library("readxl")
 library("grid")
+library("tmap")
+library("tmaptools")
 
 # function to obtain Food Environment Atlas data (2014)
+
+# Note to author: this function does not run without modification.The file it saves is not readable to R. 
 get_food_envir_data <- function() {
 	dir <- tempdir()
 	download.file("https://www.ers.usda.gov/webdocs/DataFiles/48731/February2014.xls?v=41688", destfile = file.path(dir, "DataDownload.xls"), mode="wb")
